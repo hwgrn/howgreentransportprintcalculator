@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>탄소발자국 계산기: 교통편</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <right><img src="Artboard 8.png" height="120" width=“100%”></right>
+
+    <h1>당신의 탄소발자국은?</h1>
+    <style>
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        color: green;
+      }
+      </style>
+      <h3>우리가 교통수단들을 이용할 때마다 탄소가 배출된다는 사실, 아시나요? 오늘 이용한 교통수단의 탄소 배출량을 확인해보세요!
+        <br>
+        당신이 이용한 교통수단 아래 이동 거리를 적어주시고 맨 밑에 "결과보기" 버튼을 눌러주세요!
+        <br>
+      <style>
+      h3 {
+        font-size: 25px;
+        text-align: center;
+        color: black;
+      }
+      </style>
+  </head>
+
+  <body>
+    <form name="formcalc">
+
+        <style>
+          #grid{
+            display: grid;
+            grid-template-columns: 150px;
+          }
+          .index {
+            width:20%;
+            float: center;
+            margin: 0 3% 48px 0;
+          }
+
+            .index:nth-child(9n) {
+               margin-right: 0;
+             }
+      </style>
+
+      <body>
+        <div id="grid">
+          </body>
+
+
+      도보: <input type="text" name="txtnum1">
+      <br>
+      자전거: <input type="text" name="txtnum2">
+      <br>
+      버스: <input type="text" name="txtnum3">
+      <br>
+      지하철: <input type="text" name="txtnum4">
+      <br>
+      고속열차: <input type="text" name="txtnum5">
+      <br>
+      중형차 (휘발류): <input type="text" name="txtnum6">
+      <br>
+      중형차 (디젤): <input type="text" name="txtnum7">
+      <br>
+      중형차 (하이브리드): <input type="text" name="txtnum7">
+      <br>
+      중형차 (플러그인 하이브리드): <input type="text" name="txtnum8">
+      <br>
+      중형차 (전기): <input type="text" name="txtnum9">
+      <br>
+      대형차 (휘발류): <input type="text" name="txtnum10">
+      <br>
+      대형차 (디젤): <input type="text" name="txtnum11">
+      <br>
+      대형차 (하이브리드): <input type="text" name="txtnum12">
+      <br>
+      대형차 (플러그인 하이브리드): <input type="text" name="txtnum13">
+      <br>
+      대형차 (전기): <input type="text" name="txtnum14">
+      <br>
+      오토바이: <input type="text" name="txtnum15">
+      <br>
+      택시: <input type="text" name="txtnum16">
+      <br>
+      국내 비행: <input type="text" name="txtnum17">
+      <br>
+      단거리 비행: <input type="text" name="txtnum18">
+      <br>
+      장거리 비행: <input type="text" name="txtnum19">
+      <br>
+      중형차 (플러그인 하이브리드): <input type="text" name="txtnum20">
+      <br>
+
+    <h2>탄소배출량 (gCO2e/km)</h2>
+
+<p>
+       <input type="text" name="txtres"><br>
+      </p>
+
+      <input type="button" value="결과보기" onClick="sumValues()">
+
+      </form>
+
+      <script type="text/javascript">
+
+            function sumValues()
+            {
+            var num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14, num15, num16, num17, num18, num19, num20, res;
+              num1=Number(document.formcalc.txtnum1.value);
+              num2=Number(document.formcalc.txtnum2.value);
+              num3=Number(document.formcalc.txtnum3.value);
+              num4=Number(document.formcalc.txtnum4.value);
+              num5=Number(document.formcalc.txtnum5.value);
+              num6=Number(document.formcalc.txtnum6.value);
+              num7=Number(document.formcalc.txtnum7.value);
+              num8=Number(document.formcalc.txtnum8.value);
+              num9=Number(document.formcalc.txtnum9.value);
+              num10=Number(document.formcalc.txtnum10.value);
+              num11=Number(document.formcalc.txtnum11.value);
+              num12=Number(document.formcalc.txtnum12.value);
+              num13=Number(document.formcalc.txtnum13.value);
+              num14=Number(document.formcalc.txtnum14.value);
+              num15=Number(document.formcalc.txtnum15.value);
+              num16=Number(document.formcalc.txtnum16.value);
+              num17=Number(document.formcalc.txtnum17.value);
+              num18=Number(document.formcalc.txtnum18.value);
+              num19=Number(document.formcalc.txtnum19.value);
+              num20=Number(document.formcalc.txtnum20.value);
+              res=num1*0+num2*0+num3*104.71+num4*60+num5*50+num6*192.28+num7*170.61+num8*108.95+num9*70.83+num10*53.17+num11*282.95+num12*209.47+num13*131.77+num14*77.31+num15*66.88+num16*102.89+num17*150.18+num18*254.93+num19*155.73+num20*149.81;
+              document.formcalc.txtres.value=res;
+            }
+            </script>
+  </body>
+</html>
